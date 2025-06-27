@@ -7,6 +7,12 @@ class Line(p1: Point, p2: Point): Shape{
     var p2: Point = p2
         get() = p2.clone()
 
+    init {
+        if ((p1.x == p2.x) && (p1.y == p2.y)){
+            throw IllegalArgumentException("Line Length must be greater than 0")
+        }
+    }
+
     override public fun move(deltaX: Double, deltaY: Double){
         p1.move(deltaX, deltaY)
         p2.move(deltaX, deltaY)
