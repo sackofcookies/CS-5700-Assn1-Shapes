@@ -1,10 +1,12 @@
 import kotlin.math.sqrt
 
 class Line(p1: Point, p2: Point): Shape{
-    var p1: Point = p1
-        get() = p1.clone()
-    var p2: Point = p2
-        get() = p2.clone()
+    private val _p1: Point = p1
+    val p1
+        get() = _p1.clone()
+    private val _p2: Point = p2
+    val p2
+        get() = _p2.clone()
 
     init {
         if ((p1.x == p2.x) && (p1.y == p2.y)){
