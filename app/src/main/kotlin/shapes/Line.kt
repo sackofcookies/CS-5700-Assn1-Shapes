@@ -1,5 +1,4 @@
 import kotlin.math.sqrt
-import kotlin.math.pow
 
 class Line(p1: Point, p2: Point): Shape{
     var p1: Point = p1
