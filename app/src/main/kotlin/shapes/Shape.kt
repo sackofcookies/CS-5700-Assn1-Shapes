@@ -1,3 +1,3 @@
 interface Shape {
-    fun move(deltaX: Double, deltaY: Double)
+    fun move(deltaX: Double = 0.0, deltaY: Double = 0.0)
 }
