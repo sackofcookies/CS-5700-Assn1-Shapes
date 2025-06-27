@@ -1,10 +1,21 @@
 class Triangle(p1: Point, p2: Point, p3: Point): Shape2d {
-    var p1 = p1
-        get() = p1.clone()
-    var p2 = p2
-        get() = p2.clone()
-    var p3 = p3
-        get() = p3.clone()
+    private val _p1 = p1
+    val p1
+        get() = _p1.clone()
+    private val _p2 = p2
+    val p2
+        get() = _p2.clone()
+    private val _p3 = p3
+    val p3
+        get() = _p3.clone()
+
+    init {
+        val tempLine1 = Line(p1, p2)
+        val tempLine2 = Line(p1, p3)
+        if (tempLine1.getSlope() == tempLine2.getSlope()) {
+            throw IllegalArgumentException("Area of Triangle must be greater than 0")
+        }
+    }
 
     override public fun move(deltaX: Double, deltaY: Double){
         p1.move(deltaX, deltaY)
