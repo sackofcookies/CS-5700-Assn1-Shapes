@@ -13,5 +13,5 @@ class Line(p1: Point, p2: Point): Shape{
     }
 
     public fun getSlope(): Double = ((p2.y - p1.y)/(p2.x - p1.x))
-    public fun getLength(): Double = sqrt(((p2.x - p1.x)*(p2.x - p1.x))+((p2.y - p1.y)-(p2.y - p1.y)))
+    public fun getLength(): Double = sqrt(((p2.x - p1.x)*(p2.x - p1.x))+((p2.y - p1.y)*(p2.y - p1.y)))
 }
