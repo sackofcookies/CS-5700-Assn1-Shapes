@@ -12,6 +12,12 @@ open class Ellipse(center: Point, r1: Double, r2: Double): Shape2d {
     override public fun getArea(): Double = (kotlin.math.PI * r1 * r2)
 
     init {
+        if (r1.isInfinite() || r2.isInfinite()){
+            throw IllegalArgumentException("radii cannot be infinite")
+        }
+        if (r1.isNaN() || r2.isNaN()){
+            throw IllegalArgumentException("radii must be a number")
+        }
         if (this.getArea() == 0.0){
             throw IllegalArgumentException("Area Must Be Greater than 0")
         }
