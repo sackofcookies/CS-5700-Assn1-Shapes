@@ -7,8 +7,17 @@ class Point(x: Double, y: Double) : Shape{
     fun clone(): Point = Point(x, y)
 
     override public fun move(deltaX: Double, deltaY: Double) {
-        x += deltaX
-        y += deltaY
+        if (deltaX.isInfinite() || deltaY.isInfinite()){
+            throw IllegalArgumentException("Values cannot be infinity")
+        }
+        else if (deltaX.isNaN() || deltaY.isNaN()){
+            throw IllegalArgumentException("Values cannot be NaN")
+        }
+        else{
+            x += deltaX
+            y += deltaY
+        }
+        
     }
 
     init {
