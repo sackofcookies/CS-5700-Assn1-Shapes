@@ -12,13 +12,10 @@ class Point(x: Double, y: Double) : Shape{
     }
 
     init {
-        if (x == Double.POSITIVE_INFINITY || x == Double.NEGATIVE_INFINITY){
-            throw IllegalArgumentException("x cannot be infinity")
+        if (x.isInfinite()|| y.isInfinite()){
+            throw IllegalArgumentException("Values cannot be infinity")
         }
-        if (y == Double.POSITIVE_INFINITY || y == Double.NEGATIVE_INFINITY){
-            throw IllegalArgumentException("y cannot be infinity")
-        }
-        if (x == Double.NaN || y == Double.NaN){
+        if (x.isNaN() || y.isNaN()){
             throw IllegalArgumentException("Values cannot be NaN")
         }
     }
