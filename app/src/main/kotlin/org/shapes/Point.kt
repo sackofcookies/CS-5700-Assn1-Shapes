@@ -1,9 +1,9 @@
 package org.shapes
 
 class Point(x: Double, y: Double) : Shape{
-    var x = x 
+    var x: Double = x 
         private set
-    var y = y
+    var y: Double = y
         private set
 
     fun clone(): Point = Point(x, y)
