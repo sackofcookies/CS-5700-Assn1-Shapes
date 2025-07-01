@@ -9,8 +9,8 @@ open class Rectangle(p1: Point, p2: Point): Shape2d{
         get() = _p2.clone()
 
     override public fun move(deltaX: Double, deltaY: Double) {
-        p1.move(deltaX, deltaY)
-        p2.move(deltaX, deltaY)
+        _p1.move(deltaX, deltaY)
+        _p2.move(deltaX, deltaY)
     }
     override public fun getArea(): Double{
         val tempLine1  = Line(p1, Point(p2.x, p1.y))

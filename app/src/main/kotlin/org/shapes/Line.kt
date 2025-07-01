@@ -17,8 +17,8 @@ class Line(p1: Point, p2: Point): Shape{
     }
 
     override public fun move(deltaX: Double, deltaY: Double){
-        p1.move(deltaX, deltaY)
-        p2.move(deltaX, deltaY)
+        _p1.move(deltaX, deltaY)
+        _p2.move(deltaX, deltaY)
     }
 
     public fun getSlope(): Double = ((p2.y - p1.y)/(p2.x - p1.x))
