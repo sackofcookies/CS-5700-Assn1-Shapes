@@ -23,5 +23,8 @@ open class Ellipse(center: Point, r1: Double, r2: Double): Shape2d {
         if (this.getArea() == 0.0){
             throw IllegalArgumentException("Area Must Be Greater than 0")
         }
+        if (r1 < 0 || r2 < 0){
+            throw IllegalArgumentException("radii cannot be Negitive")
+        }
     }
 }

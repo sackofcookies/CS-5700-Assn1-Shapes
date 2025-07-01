@@ -1,7 +1,6 @@
 package org.shapes
 
 import kotlin.test.Test
-import kotlin.test.assertNotNull
 import kotlin.test.assertFails
 import kotlin.test.assertEquals
 
