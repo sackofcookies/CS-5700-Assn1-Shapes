@@ -32,4 +32,13 @@ class LineTest {
         assertEquals(0.0, line.p1.y)
         assertEquals(5.0, line.p2.y)
     }
+
+    @Test fun getLength() {
+        val line = Line(Point(0.0, 0.0), Point(3.0, 4.0))
+        assertEquals(5.0, line.getLength())
+    }
+    @Test fun getSlope() {
+        val line = Line(Point(0.0, 0.0), Point(1.0, 2.0))
+        assertEquals(2.0, line.getSlope())
+    }
 }

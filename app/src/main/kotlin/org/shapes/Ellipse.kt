@@ -9,7 +9,7 @@ open class Ellipse(center: Point, r1: Double, r2: Double): Shape2d {
     var r2 = r2
         private set
 
-    override public fun move(deltaX: Double, deltaY: Double) = center.move(deltaX, deltaY)
+    override public fun move(deltaX: Double, deltaY: Double) = _center.move(deltaX, deltaY)
 
     override public fun getArea(): Double = (kotlin.math.PI * r1 * r2)
 
