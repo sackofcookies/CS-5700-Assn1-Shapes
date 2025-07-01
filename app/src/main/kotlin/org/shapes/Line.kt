@@ -1,3 +1,5 @@
+package org.shapes
+
 import kotlin.math.sqrt
 
 class Line(p1: Point, p2: Point): Shape{

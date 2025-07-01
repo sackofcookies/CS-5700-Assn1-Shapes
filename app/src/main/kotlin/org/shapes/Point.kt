@@ -1,8 +1,10 @@
+package org.shapes
+
 class Point(x: Double, y: Double) : Shape{
     var x = x 
-        private set()
+        private set
     var y = y
-        private set()
+        private set
 
     fun clone(): Point = Point(x, y)
 

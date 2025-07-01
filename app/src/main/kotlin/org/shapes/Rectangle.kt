@@ -1,3 +1,5 @@
+package org.shapes
+
 open class Rectangle(p1: Point, p2: Point): Shape2d{
     private val _p1: Point = p1
     val p1
@@ -11,7 +13,7 @@ open class Rectangle(p1: Point, p2: Point): Shape2d{
         p2.move(deltaX, deltaY)
     }
     override public fun getArea(): Double{
-        val tempLine1:  = Line(p1, Point(p2.x, p1.y))
+        val tempLine1  = Line(p1, Point(p2.x, p1.y))
         val tempLine2 = Line(p2, Point(p2.x, p1.y))
         return (tempLine1.getLength() * tempLine2.getLength())
     }

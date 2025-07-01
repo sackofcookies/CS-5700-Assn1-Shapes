@@ -1,3 +1,5 @@
+package org.shapes
+
 class Triangle(p1: Point, p2: Point, p3: Point): Shape2d {
     private val _p1 = p1
     val p1
