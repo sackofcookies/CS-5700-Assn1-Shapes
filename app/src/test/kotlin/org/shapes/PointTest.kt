@@ -25,6 +25,10 @@ class PointTest {
             Point(0.0, Double.NaN)
         }
 
+        val point = Point(3.0, 4.0)
+        assertEquals(3.0, point.x)
+        assertEquals(4.0, point.y)
+
         
     }
 

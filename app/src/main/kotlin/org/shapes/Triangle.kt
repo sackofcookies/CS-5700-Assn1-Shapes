@@ -1,5 +1,7 @@
 package org.shapes
 
+import kotlin.math.abs
+
 class Triangle(p1: Point, p2: Point, p3: Point): Shape2d {
     private val _p1 = p1
     val p1
@@ -18,7 +20,7 @@ class Triangle(p1: Point, p2: Point, p3: Point): Shape2d {
         _p3.move(deltaX, deltaY)
     }   
 
-    override public fun getArea(): Double = (((p2.x - p1.x) * (p3.y - p1.y)) - ((p3.x - p1.x) * (p2.y - p1.y))) / 2
+    override public fun getArea(): Double = kotlin.math.abs((((p2.x - p1.x) * (p3.y - p1.y)) - ((p3.x - p1.x) * (p2.y - p1.y))) / 2)
 
     init {
         if (this.getArea() == 0.0){

@@ -14,7 +14,7 @@ open class Rectangle(p1: Point, p2: Point): Shape2d{
     }
     override public fun getArea(): Double{
         val tempLine1  = Line(p1, Point(p2.x, p1.y))
-        val tempLine2 = Line(p2, Point(p2.x, p1.y))
+        val tempLine2 = Line(p1, Point(p1.x, p2.y))
         return (tempLine1.getLength() * tempLine2.getLength())
     }
 
